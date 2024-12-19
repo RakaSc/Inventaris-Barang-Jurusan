@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    @media screen and(max-width: 768px) {
+      .text-container h2 {
+        font-size: 2rem;
+      }
+
+      .text-container p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <!--Buat navigasi untuk pergi ke page lain -->
+      <div class="container">
+        <a href="https://www.smkn8malang.sch.id/" class="logo"
+          ><img src="asset/img/logoSMKN8Malang.png" alt="Logo"
+        /></a>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="Page/DaftarBarang.html">Daftar Barang</a></li>
+          <li><a href="Page/Formulir.html">Formulir</a></li>
+          <li><a href="Page/Kritik&Saran.html">Kritik & Saran</a></li>
+        </ul>
+        <div class="tombol">&#9776;</div>
+        <!--tombol navigasi-->
+      </div>
+    </nav>
+    <section class="Welcome-section" id="welcome">
+      <section class="tentang-section" id="tentang">
+        <div class="text-container">
+          <h2>Inventaris Barang Jurusan</h2>
+          <p>Pinjam sekarang</p>
+          <a href="Page/DaftarBarang.html" class="btn-utama">Pinjam </a>
+        </div>
+        <div class="image-container">
+          <img
+            src="asset/img/gambarpenyimpanandata.png"
+            alt="Deskripsi Gambar"
+          />
+        </div>
+      </section>
+    </section>
+    <script type="text/javascript">
+      const tombol = document.querySelector(".tombol");
+      const menu = document.querySelector(".menu"); //supaya tombol nav saat layar kecil dapat di tekan
+      tombol.addEventListener("click", () => {
+        menu.classList.toggle("aktif");
+      });
+    </script>
+  </body>
+</html>

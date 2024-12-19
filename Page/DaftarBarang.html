@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Barang</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .grid-container {
+        /* supaya responsive */
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .wadah {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+
+      .wadah img {
+        width: 100px;
+        height: 100px;
+        margin-right: 15px;
+      }
+
+      .wadah .text {
+        flex-grow: 1;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-top: 20px;
+      }
+
+      .btn-utama {
+        text-decoration: none;
+        padding: 5px 10px;
+        color: white;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="https://w`ww.smkn8malang.sch.id/" class="logo"
+          ><img src="../asset/img/logoSMKN8Malang.png" alt="Logo"
+        /></a>
+        <ul class="menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#">Daftar Barang</a></li>
+          <li><a href="Formulir.html">Formulir</a></li>
+          <li><a href="Kritik&Saran.html">Kritik & Saran</a></li>
+        </ul>
+        <div class="tombol">&#9776;</div>
+      </div>
+    </nav>
+    <h2>Daftar Barang</h2>
+    <div class="grid-container">
+      <div class="wadah">
+        <img src="../asset/img/proyektor.jpeg" alt="Proyektor" />
+        <div class="text">
+          <h4>Proyektor</h4>
+          <a href="Formulir.html" class="btn-utama">Pinjam</a>
+        </div>
+      </div>
+      <div class="wadah">
+        <img src="../asset/img/VGA.jpeg" alt="Kabel VGA" />
+        <div class="text">
+          <h4>Kabel VGA</h4>
+          <a href="Formulir.html" class="btn-utama">Pinjam</a>
+        </div>
+      </div>
+      <div class="wadah">
+        <img src="../asset/img/kabel hdmi.jpg" alt="Kabel HDMI" />
+        <div class="text">
+          <h4>Kabel HDMI</h4>
+          <a href="Formulir.html" class="btn-utama">Pinjam</a>
+        </div>
+      </div>
+      <div class="wadah">
+        <img src="../asset/img/kabel rol.jpg" alt="Kabel Rol" />
+        <div class="text">
+          <h4>Kabel Rol</h4>
+          <a href="Formulir.html" class="btn-utama">Pinjam</a>
+        </div>
+      </div>
+      <div class="wadah">
+        <img src="../asset/img/laptop.jpg" alt="Laptop" />
+        <div class="text">
+          <h4>Laptop</h4>
+          <a href="Formulir.html" class="btn-utama">Pinjam</a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const tombol = document.querySelector(".tombol");
+      const menu = document.querySelector(".menu");
+      tombol.addEventListener("click", () => {
+        menu.classList.toggle("aktif");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,310 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+.navbar {
+    background: #6b4635;
+    margin: 0;
+    padding: 10px 30px;
+    background: linear-gradient(90deg,#d4ac0d,#c0392b,#8e2b1f);
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img{
+    height: 40px;
+    width: 40px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+
+.menu li{
+    padding-left: 0;
+    margin-right: 10px;
+}
+
+.menu li a{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.tombol{
+    display: none;
+    color: white;
+    font-size: 14pt;
+}
+
+.tombol:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .menu{
+        display: none;
+    }
+
+    .tombol{
+        display: block;
+    }
+    .menu.aktif{
+        display: inline-block;
+        position: absolute;
+        top: 64px;
+        background: #00000075;
+        padding: 10px 20px;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        backdrop-filter: blur(3px);
+    }
+
+    .menu.aktif li a{
+        padding: 10px;
+        display: inline-block !important;
+    }
+}
+
+.btn-utama{
+    background: #ca7300;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    border: none;
+    text-decoration: none;
+
+}
+
+.btn-utama:hover{
+background: #ff9100;
+}
+
+.btn-utama:active{
+    background: #965500;
+}
+.Welcome-section{
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(asset/img/gambar2Laptop&Kantor.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+}
+
+.Welcome-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Welcome-text{
+position: relative;
+color: white;
+z-index: 1;
+text-align: center;
+}
+
+.Welcome-text h1{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.tentang-section{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 20px;
+    height: 528px;
+    position: relative;
+}
+.image-container{
+    flex: 1;
+    margin-left: 35px;
+    justify-content: center;
+}
+.image-container img{
+    max-width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); */
+}
+.text-container{
+    flex: 1;
+    padding: 20px;
+
+    color: white;
+}
+.text-container h2{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.text-container p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.produk-section{
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+.produk-section h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.produk-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.produk-card{
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.produk-card .column{
+    flex: 1;
+}
+
+.produk-card p .column.left{
+    text-align: left;
+}
+.produk-card p .column.center{
+    text-align: center;
+}
+.produk-card p .column.right{
+    text-align: right;
+}
+
+.produk-card h3{
+    margin-top: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.produk-card p{
+    font-size: 25px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.kritik-section{
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.contact-section{
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+    
+}
+
+.kritik-section h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+.contact-section h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.kritik-form{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px 50px 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.contact-form{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px 50px 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.form-group{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.form-group input, .form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.form-group textarea{
+    resize: none;
+}
+
+#TK{
+    width:150px ;
+    height: 20px;
+}
+
+#reset{
+    height: 38px;
+}
+.Form-section{
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.Form-section h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}

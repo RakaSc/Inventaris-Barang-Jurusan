@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kritik&Saran</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="https://www.smkn8malang.sch.id/" class="logo"
+          ><img src="../asset/img/logoSMKN8Malang.png" alt="Logo"
+        /></a>
+        <ul class="menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="DaftarBarang.html">Daftar Barang</a></li>
+          <li><a href="#">Kritik & Saran</a></li>
+        </ul>
+        <div class="tombol">&#9776;</div>
+      </div>
+    </nav>
+
+    <section class="kritik-section" id="kritik">
+      <h2>Kritik dan Saran</h2>
+      <form
+        action="https://script.google.com/macros/s/AKfycby-2WVb1j-M0r-RmRYaaIIW4Le390IA-MNwXTJBhvq_UOLfxAMQY7Cc277ZA2MNKb_bgg/exec"
+        method="post"
+        class="kritik-form"
+      >
+        <!--menghubungkan form dengan Google Spreadsheet-->
+        <div class="form-group">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="kritik-message">Pesan:</label>
+          <textarea
+            name="kritik-message"
+            id="kritik-message"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-utama">Kirim Kritik/Saran</button>
+      </form>
+    </section>
+
+    <script type="text/javascript">
+      const tombol = document.querySelector(".tombol");
+      const menu = document.querySelector(".menu");
+      tombol.addEventListener("click", () => {
+        menu.classList.toggle("aktif");
+      }); //supaya tombol navigasi dapat di click
+    </script>
+  </body>
+</html>
